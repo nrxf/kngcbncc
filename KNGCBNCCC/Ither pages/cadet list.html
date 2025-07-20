@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KNGC BNCC Cadet List</title>
+  <style>
+    /* Full page background with dark overlay */
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: url('https://scontent.fzyl2-1.fna.fbcdn.net/v/t39.30808-6/429673370_430388199553480_2707437510328252521_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFDGpiD7q_D4acejS8CBwU_Ou4yACvQfNs67jIAK9B82zrFR3AsF6qUk1F-HCpgES6p_uFoza9egcVaKHUNeEUp&_nc_ohc=ffVPToOu9hMQ7kNvwEHHLxE&_nc_oc=AdmtxT8Vw44vzTKQ9SKZ1qTHFODfXFfnUfzwnPSZ3p1i3pzyPe-BefqVeI5JdtVxMMk&_nc_zt=23&_nc_ht=scontent.fzyl2-1.fna&_nc_gid=oWQuKoT2izpsX2lmzu4iPg&oh=00_AfTuFR0DOfx9nDnIR9VN5KgDd-vmwSFV6ocrvPhtivRNgQ&oe=68815418') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      z-index: 0;
+      min-height: 100vh;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.85); /* Darker overlay for clearer contrast */
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* Animated glowing header text */
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 40px;
+      color: #ff4c4c;
+      animation: glow 2s ease-in-out infinite alternate;
+      text-shadow:
+        0 0 5px #ff4c4c,
+        0 0 10px #ff4c4c,
+        0 0 20px #ff4c4c,
+        0 0 40px #ff0000;
+    }
+    @keyframes glow {
+      from {
+        text-shadow:
+          0 0 5px #ff4c4c,
+          0 0 10px #ff4c4c,
+          0 0 20px #ff4c4c,
+          0 0 40px #ff0000;
+        color: #ff4c4c;
+      }
+      to {
+        text-shadow:
+          0 0 10px #ff0000,
+          0 0 20px #ff0000,
+          0 0 30px #ff1a1a,
+          0 0 50px #ff0000;
+        color: #ff1a1a;
+      }
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: skyblue;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    .cadet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      justify-items: center;
+    }
+    .cadet-card {
+      background: #222831; /* Slightly lighter dark background for better contrast */
+      border-radius: 12px;
+      padding: 20px;
+      width: 300px; /* increased width */
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 150, 255, 0.5); /* stronger glow */
+      transition: transform 0.3s ease;
+    }
+    .cadet-card:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 25px rgba(0, 200, 255, 0.9); /* stronger glow on hover */
+    }
+    .cadet-card img {
+      width: 220px; /* bigger image */
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 5px solid #00bfff; /* bright skyblue border */
+      box-shadow: 0 4px 15px rgba(0, 191, 255, 0.7); /* subtle glow */
+      background-color: white; /* in case images have transparency */
+    }
+    .cadet-info {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      color: #ddd;
+    }
+    .cadet-info strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+      color: #ff4c4c;
+    }
+
+    /* Responsive padding for smaller screens */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      .cadet-card {
+        width: 90vw;
+      }
+      .cadet-card img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>All Cadets In KNGC</h1>
+
+  <section id="batch-2025">
+    <h2>Cadet Batch 2025</h2>
+    <div class="cadet-grid">
+      <div class="cadet-card">
+        <img src="https://scontent.fzyl2-1.fna.fbcdn.net/v/t39.30808-6/429673370_430388199553480_2707437510328252521_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFDGpiD7q_D4acejS8CBwU_Ou4yACvQfNs67jIAK9B82zrFR3AsF6qUk1F-HCpgES6p_uFoza9egcVaKHUNeEUp&_nc_ohc=ffVPToOu9hMQ7kNvwEHHLxE&_nc_oc=AdmtxT8Vw44vzTKQ9SKZ1qTHFODfXFfnUfzwnPSZ3p1i3pzyPe-BefqVeI5JdtVxMMk&_nc_zt=23&_nc_ht=scontent.fzyl2-1.fna&_nc_gid=oWQuKoT2izpsX2lmzu4iPg&oh=00_AfTuFR0DOfx9nDnIR9VN5KgDd-vmwSFV6ocrvPhtivRNgQ&oe=68815418" alt="John Doe" />
+        <div class="cadet-info">
+          <strong>Name</strong>
+          Rank: <br />
+          Cadet No: <br />
+          Role: 
+        </div>
+      </div>
+      <div class="cadet-card">
+        <img src="https://scontent.fzyl2-1.fna.fbcdn.net/v/t39.30808-6/429673370_430388199553480_2707437510328252521_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFDGpiD7q_D4acejS8CBwU_Ou4yACvQfNs67jIAK9B82zrFR3AsF6qUk1F-HCpgES6p_uFoza9egcVaKHUNeEUp&_nc_ohc=ffVPToOu9hMQ7kNvwEHHLxE&_nc_oc=AdmtxT8Vw44vzTKQ9SKZ1qTHFODfXFfnUfzwnPSZ3p1i3pzyPe-BefqVeI5JdtVxMMk&_nc_zt=23&_nc_ht=scontent.fzyl2-1.fna&_nc_gid=oWQuKoT2izpsX2lmzu4iPg&oh=00_AfTuFR0DOfx9nDnIR9VN5KgDd-vmwSFV6ocrvPhtivRNgQ&oe=68815418" alt="Jane Smith" />
+        <div class="cadet-info">
+          <strong>Name</strong>
+          Rank: <br />
+          Cadet No:<br />
+          Role:
+        </div>
+      </div>
+      <!-- Add more cadet cards for 2025 here -->
+    </div>
+  </section>
+
+  <section id="batch-2024">
+    <h2>Cadet Batch 2024</h2>
+    <div class="cadet-grid">
+      <div class="cadet-card">
+        <img src="https://scontent.fzyl2-1.fna.fbcdn.net/v/t39.30808-6/429673370_430388199553480_2707437510328252521_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFDGpiD7q_D4acejS8CBwU_Ou4yACvQfNs67jIAK9B82zrFR3AsF6qUk1F-HCpgES6p_uFoza9egcVaKHUNeEUp&_nc_ohc=ffVPToOu9hMQ7kNvwEHHLxE&_nc_oc=AdmtxT8Vw44vzTKQ9SKZ1qTHFODfXFfnUfzwnPSZ3p1i3pzyPe-BefqVeI5JdtVxMMk&_nc_zt=23&_nc_ht=scontent.fzyl2-1.fna&_nc_gid=oWQuKoT2izpsX2lmzu4iPg&oh=00_AfTuFR0DOfx9nDnIR9VN5KgDd-vmwSFV6ocrvPhtivRNgQ&oe=68815418" alt="Michael Lee" />
+        <div class="cadet-info">
+          <strong>Name</strong>
+          Rank: <br />
+          Cadet No: <br />
+          Role:
+        </div>
+      </div>
+      <!-- Add more cadet cards for 2024 here -->
+    </div>
+  </section>
+
+  <section id="batch-2023">
+    <h2>Cadet Batch 2023</h2>
+    <div class="cadet-grid">
+      <div class="cadet-card">
+        <img src="https://scontent.fzyl2-1.fna.fbcdn.net/v/t39.30808-6/429673370_430388199553480_2707437510328252521_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFDGpiD7q_D4acejS8CBwU_Ou4yACvQfNs67jIAK9B82zrFR3AsF6qUk1F-HCpgES6p_uFoza9egcVaKHUNeEUp&_nc_ohc=ffVPToOu9hMQ7kNvwEHHLxE&_nc_oc=AdmtxT8Vw44vzTKQ9SKZ1qTHFODfXFfnUfzwnPSZ3p1i3pzyPe-BefqVeI5JdtVxMMk&_nc_zt=23&_nc_ht=scontent.fzyl2-1.fna&_nc_gid=oWQuKoT2izpsX2lmzu4iPg&oh=00_AfTuFR0DOfx9nDnIR9VN5KgDd-vmwSFV6ocrvPhtivRNgQ&oe=68815418" alt="Anna Kim" />
+        <div class="cadet-info">
+          <strong>Name</strong>
+          Rank: <br />
+          Cadet No:<br />
+          Role:
+        </div>
+      </div>
+      <!-- Add more cadet cards for 2023 here -->
+    </div>
+  </section>
+
+  <section id="batch-2022">
+    <h2>Cadet Batch 2022</h2>
+    <div class="cadet-grid">
+      <div class="cadet-card">
+        <img src="https://scontent.fzyl2-1.fna.fbcdn.net/v/t39.30808-6/429673370_430388199553480_2707437510328252521_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFDGpiD7q_D4acejS8CBwU_Ou4yACvQfNs67jIAK9B82zrFR3AsF6qUk1F-HCpgES6p_uFoza9egcVaKHUNeEUp&_nc_ohc=ffVPToOu9hMQ7kNvwEHHLxE&_nc_oc=AdmtxT8Vw44vzTKQ9SKZ1qTHFODfXFfnUfzwnPSZ3p1i3pzyPe-BefqVeI5JdtVxMMk&_nc_zt=23&_nc_ht=scontent.fzyl2-1.fna&_nc_gid=oWQuKoT2izpsX2lmzu4iPg&oh=00_AfTuFR0DOfx9nDnIR9VN5KgDd-vmwSFV6ocrvPhtivRNgQ&oe=68815418" alt="David Park" />
+        <div class="cadet-info">
+          <strong>Name</strong>
+          Rank: <br />
+          Cadet No:<br />
+          Role: 
+        </div>
+      </div>
+      <!-- Add more cadet cards for 2022 here -->
+    </div>
+  </section>
+
+</body>
+</html>

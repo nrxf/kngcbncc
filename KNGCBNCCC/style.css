@@ -1,0 +1,335 @@
+/* Full-page background image with very low opacity and blur */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("file:///F:/KNGCBNCCC/IMG/bncc.jpg");
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.1;         /* lowered opacity for very faint background */
+  filter: blur(6px);    /* subtle blur */
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* =================== Reset and Basic Styles =================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: white;
+  line-height: 1.6;
+}
+
+/* =================== Header =================== */
+header {
+  background: linear-gradient(90deg, red, skyblue, blue);
+  padding: 20px;
+  text-align: center;
+  animation: glow 2s infinite alternate;
+  position: relative;
+}
+
+.header-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 50px;  /* adjust size as needed */
+  height: auto;
+  border-radius: 5px; /* optional rounded corners */
+}
+
+.header-text {
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  font-family: 'Arial Black', Arial, sans-serif;
+  text-shadow: 0 0 5px black;
+}
+
+/* Adjust padding-top of header text so it doesn't overlap */
+.animated-text {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 30px; /* space below header-left */
+  animation: glowAnimation 3s ease-in-out infinite alternate;
+  color: #00c2ff;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 10px red; }
+  100% { text-shadow: 0 0 20px skyblue; }
+}
+
+/* =================== Navigation =================== */
+nav {
+  background: #1f1f1f;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00c2ff;
+}
+
+/* =================== Button Group =================== */
+.button-group {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.center-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#join-bncc {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.zoom-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 0 10px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.zoom-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Responsive buttons on small screens */
+@media (max-width: 600px) {
+  .zoom-btn {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+/* =================== Sections =================== */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 231, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* When section becomes visible */
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  color: #00c2ff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Officer Section */
+.officer-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(30, 30, 30, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 231, 0.1);
+  color: white;
+  text-align: center;
+}
+
+.officer-section h2 {
+  color: #00c2ff;
+  margin-bottom: 25px;
+}
+
+/* Officer Container with 3 columns and 2 rows, centered */
+.officer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 25px;
+  justify-content: center;
+  justify-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.officer-card img {
+  width: 100%;
+  height: 250px; /* Fixed height for consistency */
+  object-fit: cover; /* This ensures the image fits and maintains aspect ratio */
+  border-radius: 8px 8px 0 0; /* Optional rounded corners at top */
+}
+
+.officer-card h3, .officer-card p {
+  margin-top: 12px;
+}
+
+/* =================== Gallery Grid =================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffe7;
+}
+
+/* =================== Video Section =================== */
+#video video {
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  max-width: 100%;
+  box-shadow: 0 0 20px rgba(0, 255, 231, 0.4);
+}
+
+/* =================== Footer =================== */
+footer.footer {
+  background-color: #111;
+  color: #eee;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 3px solid #00c2ff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+footer.footer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.footer-grid > div {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-grid h3 {
+  margin-bottom: 10px;
+  color: #00c2ff;
+}
+
+.footer-grid a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-grid a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #666;
+}
+
+/* =================== Floating Button =================== */
+.floating-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 28px;
+  padding: 15px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.6);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+}
+
+.floating-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* =================== Responsive =================== */
+@media (max-width: 768px) {
+  .footer-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav a {
+    display: inline-block;
+    margin: 10px 10px;
+  }
+
+  .button-center {
+    flex-direction: column;
+  }
+
+  .zoom-btn {
+    width: 90%;
+  }
+
+  .officer-container {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 90%;
+  }
+
+  .officer-card {
+    width: 100%;
+  }
+}
